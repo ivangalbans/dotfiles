@@ -1,0 +1,3 @@
+[submodule "clojure/.clojure"]
+	path = clojure/.clojure
+	url = https://github.com/ivangalbans/.clojure.git
