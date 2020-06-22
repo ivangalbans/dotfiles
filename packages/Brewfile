@@ -20,6 +20,7 @@ install azure-cli               2> /dev/null
 install borkdude/brew/babashka  2> /dev/null
 install borkdude/brew/clj-kondo 2> /dev/null
 install catimg                  2> /dev/null
+install cmake                   2> /dev/null
 install coreutils               2> /dev/null
 install fd                      2> /dev/null
 install findutils               2> /dev/null
