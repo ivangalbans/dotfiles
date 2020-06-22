@@ -1,0 +1,12 @@
+[credential]
+	helper = store
+[user]
+	name = Ivan Galban
+	email = ivan.galban.smith@gmail.com
+	signingkey = 9CD0263726A5E5C6
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[core]
+	excludesfile = /Users/ivan/.gitignore
