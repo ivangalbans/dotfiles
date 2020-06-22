@@ -1,3 +1,18 @@
 [submodule "clojure/.clojure"]
 	path = clojure/.clojure
 	url = https://github.com/ivangalbans/.clojure.git
+[submodule "emacs/.doom.d"]
+	path = emacs/.doom.d
+	url = https://github.com/ivangalbans/.doom.d.git
+[submodule "emacs/.spacemacs.d"]
+	path = emacs/.spacemacs.d
+	url = https://github.com/ivangalbans/.spacemacs.d.git
+[submodule "emacs/chemacs"]
+	path = emacs/chemacs
+	url = https://github.com/plexus/chemacs.git
+[submodule "emacs/.spacemacs.emacs.d"]
+	path = emacs/.spacemacs.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
+[submodule "emacs/.doom.emacs.d"]
+	path = emacs/.doom.emacs.d
+	url = https://github.com/hlissner/doom-emacs

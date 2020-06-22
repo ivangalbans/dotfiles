@@ -1,6 +1,6 @@
 # 🛠 dotfiles
 
-My personal configuration 💻
+My MacOS configuration 💻
 
 ## Install
 
