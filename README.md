@@ -1,6 +1,6 @@
 # 🛠 dotfiles
 
-My MacOS configuration 💻
+My personal MacOS configuration 💻
 
 ## Install
 
@@ -9,3 +9,8 @@ My MacOS configuration 💻
 brew install git
 git clone https://github.com/ivangalbans/dotfiles.git ~/dotfiles && cd ~/dotfiles && source bootstrap.sh
 ```
+
+## Thank to:
+
+- https://kalis.me/dotfiles-automating-macos-system-configuration/
+- https://github.com/mathiasbynens/dotfiles

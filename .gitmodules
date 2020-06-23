@@ -16,3 +16,6 @@
 [submodule "emacs/.doom.emacs.d"]
 	path = emacs/.doom.emacs.d
 	url = https://github.com/hlissner/doom-emacs
+[submodule "zsh/ohmyzsh"]
+	path = zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git

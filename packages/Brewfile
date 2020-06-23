@@ -31,12 +31,6 @@ install jq                      2> /dev/null
 install moreutils               2> /dev/null
 install pygments                2> /dev/null
 install yq                      2> /dev/null
-install zsh-autosuggestions     2> /dev/null
-install zsh-completions         2> /dev/null
-install zsh-git-prompt          2> /dev/null
-install zsh-lovers              2> /dev/null
-install zsh-navigation-tools    2> /dev/null
-install zsh-syntax-highlighting 2> /dev/null
 
 # Programming
 install boot-clj                2> /dev/null
