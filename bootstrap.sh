@@ -1,4 +1,6 @@
 #! /usr/bin/env sh
+#
+# https://github.com/rkalis/dotfiles/blob/master/bootstrap.sh
 
 DIR=$(dirname "$0")
 cd "$DIR"
