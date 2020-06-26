@@ -8,7 +8,7 @@ cd "$DIR"
 SOURCE="$(realpath -m .)"
 DESTINATION="$(realpath -m ~)"
 
-info "Downloading emacs distros..."
+info "Linking emacs distros..."
 
 find . -name "*.d" | while read fn; do
     fn=$(basename $fn)
@@ -17,13 +17,13 @@ done
 
 info "Installing doom..."
 
-./.doom.emacs.d/bin/doom install
+# ./.doom.emacs.d/bin/doom install
 ./.doom.emacs.d/bin/doom sync
 ./.doom.emacs.d/bin/doom env
 
 info "Installing chemacs"
 
-symlink "$SOURCE/.emacs.profiles.el" "$DESTINATION/.emacs.profiles.el"
+symlink "$SOURCE/.emacs-profiles.el" "$DESTINATION/.emacs-profiles.el"
 ./chemacs/install.sh
 
 success "Finished configuring emacs."
