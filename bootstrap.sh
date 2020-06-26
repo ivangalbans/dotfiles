@@ -1,6 +1,4 @@
 #! /usr/bin/env sh
-#
-# https://github.com/rkalis/dotfiles/blob/master/bootstrap.sh
 
 DIR=$(dirname "$0")
 cd "$DIR"
@@ -16,6 +14,9 @@ else
     error "Failed to obtain sudo credentials."
 fi
 
+info "Installing brew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 info "Installing XCode command line tools..."
 if xcode-select --print-path &>/dev/null; then
     success "XCode command line tools already installed."
@@ -26,7 +27,7 @@ else
 fi
 
 # Package control must be executed first in order for the rest to work
-# ./packages/setup.sh
+./packages/setup.sh
 
 find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
     ./$setup
