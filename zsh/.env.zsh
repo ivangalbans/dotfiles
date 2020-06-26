@@ -23,7 +23,4 @@ export PATH="$PATH:/Users/ivan/Library/Python/3.7/bin"
 export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
-GITSTATUS_DAEMON=$ZSH_CUSTOM/themes/powerlevel10k/gitstatus/bin/gitstatusd-cygwin_nt-10.0-x86_64
-
 GITSTATUS_LOG_LEVEL=DEBUG
-POWERLEVEL10K_DISABLE_GITSTATUS=true
