@@ -1,21 +1,28 @@
 [submodule "clojure/.clojure"]
 	path = clojure/.clojure
 	url = https://github.com/ivangalbans/.clojure.git
+	branch = master
 [submodule "emacs/.doom.d"]
 	path = emacs/.doom.d
 	url = https://github.com/ivangalbans/.doom.d.git
+	branch = master
 [submodule "emacs/.spacemacs.d"]
 	path = emacs/.spacemacs.d
 	url = https://github.com/ivangalbans/.spacemacs.d.git
+	branch = master
 [submodule "emacs/chemacs"]
 	path = emacs/chemacs
 	url = https://github.com/plexus/chemacs.git
+	branch = master
 [submodule "emacs/.spacemacs.emacs.d"]
 	path = emacs/.spacemacs.emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+	branch = develop
 [submodule "emacs/.doom.emacs.d"]
 	path = emacs/.doom.emacs.d
 	url = https://github.com/hlissner/doom-emacs
+	branch = develop
 [submodule "zsh/ohmyzsh"]
 	path = zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+	branch = master
