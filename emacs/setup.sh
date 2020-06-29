@@ -8,7 +8,11 @@ cd "$DIR"
 SOURCE="$(realpath -m .)"
 DESTINATION="$(realpath -m ~)"
 
-info "Linking emacs distros..."
+# Emacs (https://github.com/d12frosted/homebrew-emacs-plus.git)
+info "Installing Emacs"
+brew "emacs-plus@28 --with-xwidgets --with-modern-icon-black-variant --with-jansson"
+
+info "Linking emacs profiles..."
 
 find . -name "*.d" | while read fn; do
     fn=$(basename $fn)
@@ -17,7 +21,7 @@ done
 
 info "Installing doom..."
 
-# ./.doom.emacs.d/bin/doom install
+./.doom.emacs.d/bin/doom install
 ./.doom.emacs.d/bin/doom sync
 ./.doom.emacs.d/bin/doom env
 
