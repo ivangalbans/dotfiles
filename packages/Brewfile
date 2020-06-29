@@ -1,55 +1,56 @@
-# Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
+tap "heroku/brew"
+tap "caskroom/versions"
+tap "adoptopenjdk/openjdk"
 
-# Make sure we’re using the latest Homebrew
-update
+brew "ag"
+brew "aspell"
+brew "azure-cli"
+brew "borkdude/brew/babashka"
+brew "borkdude/brew/clj-kondo"
+brew "boot-clj"
+brew "catimg"
+brew "clojure/tools/clojure"
+brew "cmake"
+brew "coreutils"
+brew "fd"
+brew "findutils"
+brew "gcc"
+brew "git"
+brew "gp"
+brew "heroku"
+brew "imagemagick"
+brew "jbake"
+brew "jenv"
+brew "jq"
+brew "kops"
+brew "kubernetes-cli"
+brew "leiningen"
+brew "maven"
+brew "moreutils"
+brew "ngrok"
+brew "pygments"
+brew "ripgrep"
+brew "yq"
+brew "yarn"
 
-# Upgrade any already-installed formulae
-upgrade
-
-tap heroku/brew
-
-# Install some other useful utilities like `sponge`
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-
-
-# Tools
-install ag                      2> /dev/null
-install aspell                  2> /dev/null
-install azure-cli               2> /dev/null
-install borkdude/brew/babashka  2> /dev/null
-install borkdude/brew/clj-kondo 2> /dev/null
-install catimg                  2> /dev/null
-install cmake                   2> /dev/null
-install coreutils               2> /dev/null
-install fd                      2> /dev/null
-install findutils               2> /dev/null
-install git                     2> /dev/null
-install gp                      2> /dev/null
-install imagemagick             2> /dev/null
-install jq                      2> /dev/null
-install moreutils               2> /dev/null
-install pygments                2> /dev/null
-install yq                      2> /dev/null
-
-# Programming
-install boot-clj                2> /dev/null
-install clojure/tools/clojure   2> /dev/null
-install gcc                     2> /dev/null
-install heroku                  2> /dev/null
-install jbake                   2> /dev/null
-install kops                    2> /dev/null
-install kubernetes-cli          2> /dev/null
-install leiningen               2> /dev/null
-install maven                   2> /dev/null
-install ngrok                   2> /dev/null
-install yarn                    2> /dev/null
-
-# Java Manager Version
-brew install jenv               2> /dev/null
-
-# Emacs (https://github.com/d12frosted/homebrew-emacs-plus.git)
-install emacs-plus@28 --with-xwidgets --with-modern-icon-black-variant --with-jansson 2> /dev/null
-
-# Remove outdated versions from the cellar
-cleanup
+cask "adoptopenjdk/openjdk/adoptopenjdk8"
+cask "alfred"
+cask "docker"
+cask "dotnet-sdk"
+cask "firefox"
+cask "free-download-manager"
+cask "google-chrome"
+cask "iterm2"
+cask "java"
+cask "karabiner-elements"
+cask "messenger"
+cask "postman"
+cask "skim"
+cask "slack"
+cask "spotify"
+cask "telegram"
+cask "the-unarchiver"
+cask "visual-studio-code"
+cask "vlc"
+cask "whatsapp"
+cask "zoomus"
