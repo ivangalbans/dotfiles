@@ -6,7 +6,7 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath -m .)"
-DESTINATION="$(realpath -m ~)"
+DESTINATION="$(realpath -m ~/Library/Preferences)"
 
 info "Setting iterm2 configs..."
 
