@@ -10,7 +10,8 @@ DESTINATION="$(realpath -m ~)"
 
 # Emacs (https://github.com/d12frosted/homebrew-emacs-plus.git)
 info "Installing Emacs"
-brew "emacs-plus@28 --with-xwidgets --with-modern-icon-black-variant --with-jansson"
+brew "emacs-plus --with-xwidgets --with-modern-icon-black-variant"
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 
 info "Linking emacs profiles..."
 
