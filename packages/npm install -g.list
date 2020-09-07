@@ -3,3 +3,5 @@ npm
 npx
 prettier
 typescript
+stylelint
+js-beautify
