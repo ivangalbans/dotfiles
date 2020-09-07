@@ -5,3 +5,4 @@ prettier
 typescript
 stylelint
 js-beautify
+markdownlint
