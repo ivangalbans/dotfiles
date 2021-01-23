@@ -25,4 +25,10 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/usr/local/bin/omnisharp"
 export EDITOR=vim
 
+# llvm
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib:$LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/llvm/include:$CPPFLAGS"
+
+
 GITSTATUS_LOG_LEVEL=DEBUG
