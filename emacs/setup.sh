@@ -10,7 +10,7 @@ DESTINATION="$(realpath -m ~)"
 
 # Emacs (https://github.com/d12frosted/homebrew-emacs-plus.git)
 info "Installing Emacs"
-brew "emacs-plus --with-xwidgets --with-modern-icon-black-variant"
+brew install emacs-plus --with-xwidgets --with-modern-icon-black-variant
 ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 
 info "Linking emacs profiles..."
@@ -22,13 +22,8 @@ done
 
 info "Installing doom..."
 
-./.doom.emacs.d/bin/doom install
-./.doom.emacs.d/bin/doom sync
-./.doom.emacs.d/bin/doom env
-
-info "Installing chemacs"
-
-symlink "$SOURCE/.emacs-profiles.el" "$DESTINATION/.emacs-profiles.el"
-./chemacs/install.sh
+./.emacs.d/bin/doom install
+./.emacs.d/bin/doom sync
+./.emacs.d/bin/doom env
 
 success "Finished configuring emacs."
