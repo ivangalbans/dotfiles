@@ -1,8 +1,10 @@
 http-server
+node-cljfmt
 npm
 npx
 prettier
 typescript
+safe-rm
 stylelint
 js-beautify
 markdownlint
