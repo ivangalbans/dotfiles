@@ -8,10 +8,10 @@ cd "$DIR"
 SOURCE="$(realpath -m .)"
 DESTINATION="$(realpath -m ~)"
 
-# Emacs (https://github.com/d12frosted/homebrew-emacs-plus.git)
+# https://github.com/railwaycat/homebrew-emacsmacport
 info "Installing Emacs"
-brew install emacs-plus --with-xwidgets --with-modern-icon-black-variant
-ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
+brew tap railwaycat/emacsmacport
+brew install --cask emacs-mac
 
 info "Linking emacs profiles..."
 
