@@ -20,7 +20,7 @@ export GPG_TTY=$(tty)
 
 export PATH="$PATH:/Users/ivan/.dotnet/tools"
 export PATH="$PATH:/Users/ivan/Library/Python/3.7/bin"
-export PATH="$PATH:$HOME/.doom.emacs.d/bin"
+export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/usr/local/bin/omnisharp"
 export EDITOR=vim
