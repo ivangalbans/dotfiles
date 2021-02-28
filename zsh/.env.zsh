@@ -18,8 +18,8 @@ export LDFLAGS="-L/usr/local/opt/libressl/lib"
 export CPPFLAGS="-I/usr/local/opt/libressl/include"
 export GPG_TTY=$(tty)
 
-export PATH="$PATH:/Users/ivan/.dotnet/tools"
-export PATH="$PATH:/Users/ivan/Library/Python/3.7/bin"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/Library/Python/3.7/bin"
 export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/usr/local/bin/omnisharp"
