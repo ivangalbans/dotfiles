@@ -8,6 +8,17 @@ cd "$DIR"
 SOURCE="$(realpath -m .)"
 DESTINATION="$(realpath -m ~)"
 
+info "Installing Nerd Font"
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
+# if it fails
+# https://stackoverflow.com/questions/53135863/macos-mojave-ruby-config-h-file-not-found
+info "Installing colorls"
+
+gem install colorls
+
 info "Configurating zsh..."
 
 # info "Pulling custom theme and plugins"
