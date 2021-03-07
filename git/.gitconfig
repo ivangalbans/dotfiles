@@ -49,8 +49,7 @@
 
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-[credential]
-	helper = store
+
 [user]
 	name = Ivan Galban
 	email = ivan.galban.smith@gmail.com
@@ -65,3 +64,10 @@
 	diff = auto
 	status = auto
 	branch = auto
+[filter "lfs"]
+	smudge = 'git-lfs smudge --skip %f'
+	process = 'git-lfs filter-process --skip'
+	clean = git-lfs clean -- %f
+	required = True
+[url "git@github.com:"]
+	insteadOf = https://github.com/

@@ -170,7 +170,19 @@ function vterm_printf(){
 }
 
 eval "$(direnv hook zsh)"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+eval "$(pyenv init -)"
+
+source $HOME/.nurc
+
+# BEGIN ANSIBLE MANAGED BLOCK - GO
+export GO_PATH="$HOME/go"
+export PATH="$GO_PATH/bin:$PATH"
+# END ANSIBLE MANAGED BLOCK - GO
+
+# BEGIN ANSIBLE MANAGED BLOCK - RBENV
+eval "$(rbenv init -)"
+# END ANSIBLE MANAGED BLOCK - RBENV
 
 # ColorLS settings
 source $(dirname $(gem which colorls))/tab_complete.sh
