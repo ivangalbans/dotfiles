@@ -8,6 +8,10 @@ cd "$DIR"
 SOURCE="$(realpath -m .)"
 DESTINATION="$(realpath -m ~)"
 
+info "Remember install fonts: Source Code Pro, Consolas"
+info "https://fonts.google.com/specimen/Source+Code+Pro?preview.text_type=custom"
+info "https://www.fontpalace.com/font-download/consolas/"
+
 # https://github.com/railwaycat/homebrew-emacsmacport
 info "Installing Emacs"
 brew tap railwaycat/emacsmacport
