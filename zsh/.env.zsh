@@ -17,7 +17,7 @@ eval "$(jenv init -)"
 
 export LDFLAGS="-L/usr/local/opt/libressl/lib"
 export CPPFLAGS="-I/usr/local/opt/libressl/include"
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/Library/Python/3.7/bin"

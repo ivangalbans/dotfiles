@@ -52,10 +52,10 @@
 
 [user]
 	name = Ivan Galban
-	email = ivan.galban.smith@gmail.com
-	signingkey = 9CD0263726A5E5C6
+	email = ivan.galban@nubank.com.br
+	signingkey = BB5C3CF1545C677C
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
 	program = gpg
 [core]
