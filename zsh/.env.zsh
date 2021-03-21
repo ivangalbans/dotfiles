@@ -8,12 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/Library/TeX/texbin:$PATH
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
-# Java
-# JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home"
-# PATH="${PATH}:${JAVA_HOME}/bin"
 
-export PATH="$PATH:/usr/local/opt/openjdk/bin"
-eval "$(jenv init -)"
 
 export LDFLAGS="-L/usr/local/opt/libressl/lib"
 export CPPFLAGS="-I/usr/local/opt/libressl/include"
@@ -31,6 +26,15 @@ export EDITOR=vim
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/llvm/lib:$LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/llvm/include:$CPPFLAGS"
+
+
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="${PATH}:${JAVA_HOME}/bin"
+
+# export PATH="$PATH:/usr/local/opt/openjdk/bin"
+# eval "$(jenv init -)"
 
 
 GITSTATUS_LOG_LEVEL=DEBUG
