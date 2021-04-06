@@ -34,7 +34,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH="${PATH}:${JAVA_HOME}/bin"
 
 # export PATH="$PATH:/usr/local/opt/openjdk/bin"
-# eval "$(jenv init -)"
+eval "$(jenv init -)"
 
 
 GITSTATUS_LOG_LEVEL=DEBUG
