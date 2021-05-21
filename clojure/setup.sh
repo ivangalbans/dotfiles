@@ -11,5 +11,6 @@ DESTINATION="$(realpath -m ~)"
 info "Configurating clojure..."
 
 symlink "$SOURCE/.clojure" "$DESTINATION/.clojure"
+symlink "$SOURCE/.lein" "$DESTINATION/.lein"
 
 success "Finished configuring clojure."
