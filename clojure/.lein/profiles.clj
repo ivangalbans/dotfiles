@@ -13,13 +13,10 @@
 
  :repl {;; If you need to have `cider-nrepl` and `refactor-nrepl` in your REPL
         ;; session (i.e.: vim-users), uncomment the following lines
-        :plugins [[cider/cider-nrepl "0.25.5"]
-                  [refactor-nrepl    "2.5.1"]]
+        :plugins [[cider/cider-nrepl "0.26.0"]
+                  [refactor-nrepl    "3.0.0-pr301"]]
         :repl-options {:timeout 300000}
-        :dependencies [[cljdev "0.9.0"]]
-        :injections   [(require 'nu)]}
- :nrebl  {:repl-options {:nrepl-middleware [nrebl.middleware/wrap-nrebl]}
-          :dependencies [[rickmoynihan/nrebl.middleware "0.3.1"] ;; set this to the latest nrebl version
-                         [org.clojure/core.async        "0.4.490"]
-                         [com.cognitect/rebl            "0.9.242"]]
-          :injections [(require '[cognitect.rebl :as rebl]) (rebl/ui)]}}
+        :dependencies [[cljdev "0.9.0"]
+                       [com.cognitect/rebl            "0.9.242"]]
+        :injections   [(require 'nu)
+                       (require 'cognitect.rebl)]}}
