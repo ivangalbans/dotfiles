@@ -9,6 +9,7 @@ alias mu="music unmute"
 alias mn="music next"
 alias rm="safe-rm"
 alias klj='ff(){ clj "$@" -M:klipse;  unset -f ff; }; ff'
+alias g++='g++-11'
 
 nu-refresh() {
     nu update
@@ -27,3 +28,4 @@ nu-refresh() {
     nu-mx auth get-access-token --env prod
     nu-mx auth get-access-token --env staging
 }
+
