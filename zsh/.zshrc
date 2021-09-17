@@ -186,15 +186,3 @@ eval "$(rbenv init -)"
 
 # ColorLS settings
 source $(dirname $(gem which colorls))/tab_complete.sh
-
-# Refresh AWS credentials
-are_aws_credentials_fresh() {
-    last_update=$(gstat --format '%Y' ~/.aws/credentials)
-    now=$(date +'%s')
-    delta=$((now - last_update))
-    return $((delta > 43200))
-}
-
-if [[ $- == *i* ]]; then
-    are_aws_credentials_fresh || nu aws credentials refresh
-fi
