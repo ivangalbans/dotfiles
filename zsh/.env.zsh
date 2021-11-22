@@ -15,7 +15,7 @@ export CPPFLAGS="-I/usr/local/opt/libressl/include"
 export GPG_TTY=$TTY
 
 export PATH="$PATH:$HOME/.dotnet/tools"
-export PATH="$PATH:$HOME/Library/Python/3.7/bin"
+export PATH="$PATH:/usr/local/bin/python3"
 export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/usr/local/bin/omnisharp"
