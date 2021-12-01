@@ -10,6 +10,7 @@ alias mn="music next"
 alias rm="safe-rm"
 alias klj='ff(){ clj "$@" -M:klipse;  unset -f ff; }; ff'
 alias g++='g++-11'
+alias cht=/usr/local/bin/cht.sh
 
 nu-refresh() {
     nu update
