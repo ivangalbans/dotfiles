@@ -36,5 +36,9 @@ export PATH="${PATH}:${JAVA_HOME}/bin"
 # export PATH="$PATH:/usr/local/opt/openjdk/bin"
 eval "$(jenv init -)"
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
 
 GITSTATUS_LOG_LEVEL=DEBUG

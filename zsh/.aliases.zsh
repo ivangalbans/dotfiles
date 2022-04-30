@@ -17,10 +17,10 @@ nu-refresh() {
     echo 0 | nu aws credentials refresh
     # nu certs setup --env staging
     # nu certs setup --env prod
-    nu auth get-refresh-token --env prod
-    nu auth get-refresh-token --env staging
-    nu auth get-access-token --env prod
-    nu auth get-access-token --env staging
+    # nu auth get-refresh-token --env prod
+    # nu auth get-refresh-token --env staging
+    # nu auth get-access-token --env prod
+    # nu auth get-access-token --env staging
     
     # nu-mx certs setup --env staging
     # nu-mx certs setup --env prod

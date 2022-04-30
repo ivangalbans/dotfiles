@@ -186,3 +186,7 @@ eval "$(rbenv init -)"
 
 # ColorLS settings
 source $(dirname $(gem which colorls))/tab_complete.sh
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
