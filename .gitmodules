@@ -13,4 +13,4 @@
 	branch = master
 [submodule "emacs/.emacs.d"]
 	path = emacs/.emacs.d
-	url = https://github.com/hlissner/doom-emacs
+	url = https://github.com/doomemacs/doomemacs
