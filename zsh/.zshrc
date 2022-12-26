@@ -5,7 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/.env.zsh
+source $HOME/.env.zsh
+source $HOME/.keyenv
+
+# Nubank
+source $HOME/.nu.zsh
+# END Nubank
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -101,7 +106,7 @@ plugins=(alias-finder
 	 node
 	 npm
 	 nvm
-	 osx
+	 macos
 	 pip
 	 urltools
 	 vi-mode
@@ -110,7 +115,6 @@ plugins=(alias-finder
 	 zsh-autosuggestions
 	 zsh-completions
 	 zsh-navigation-tools
-	 zsh_reload
 	 zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -171,22 +175,15 @@ function vterm_printf(){
 
 eval "$(direnv hook zsh)"
 
-eval "$(pyenv init -)"
-
-source $HOME/.nurc
-
-# BEGIN ANSIBLE MANAGED BLOCK - GO
-export GO_PATH="$HOME/go"
-export PATH="$GO_PATH/bin:$PATH"
-# END ANSIBLE MANAGED BLOCK - GO
-
-# BEGIN ANSIBLE MANAGED BLOCK - RBENV
-eval "$(rbenv init -)"
-# END ANSIBLE MANAGED BLOCK - RBENV
-
 # ColorLS settings
 source $(dirname $(gem which colorls))/tab_complete.sh
 
-. $HOME/.asdf/asdf.sh
+eval "$(jenv init -)"
 
-. $HOME/.asdf/completions/asdf.bash
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="${PATH}:${JAVA_HOME}/bin"
+
+
+autoload -Uz compinit bashcompinit && compinit && bashcompinit
+source "$NU_HOME/nucli/nu.bashcompletion"

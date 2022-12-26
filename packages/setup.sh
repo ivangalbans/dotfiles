@@ -5,7 +5,6 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
-
 info "Installing Brewfile packages..."
 brew bundle
 success "Finished installing Brewfile packages."
@@ -13,6 +12,9 @@ success "Finished installing Brewfile packages."
 info "Installing nvm, node"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install node
+
+info "Installing GraalVM"
+curl -sL https://get.graalvm.org/jdk
 
 find * -name "*.list" | while read fn; do
     cmd="${fn%.*}"
@@ -22,7 +24,7 @@ find * -name "*.list" | while read fn; do
         if [[ $package == $COMMENT ]]; then continue; fi
         substep_info "Installing $package..."
         $cmd $package
-    done < "$fn"
+    done <"$fn"
     success "Finished installing $1 packages."
 done
 
