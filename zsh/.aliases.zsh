@@ -34,7 +34,8 @@ nu-br-refresh() {
 
 nu-co-refresh() {
     nu update
-    echo 0 | nu-co aws credentials refresh --maven-login
+    # echo 0 | nu-co aws credentials refresh --maven-login
+    echo 0 | nu-co aws credentials refresh
 
     nu-co auth get-refresh-token --env prod
     nu-co auth get-refresh-token --env staging
@@ -45,6 +46,7 @@ nu-co-refresh() {
 nu-ist-refresh() {
     nu update
     echo 0 | nu-ist aws credentials refresh --maven-login
+    echo 0 | nu-ist aws credentials refresh
 
     nu-ist auth get-refresh-token --env prod
     nu-ist auth get-refresh-token --env staging
@@ -54,7 +56,8 @@ nu-ist-refresh() {
 
 nu-refresh() {
     nu update
-    echo 0 | nu aws credentials refresh --maven-login
+    echo 0 | nu aws credentials refresh
+    # echo 0 | nu aws credentials refresh --maven-login
 
     nu-mx auth get-refresh-token --env prod
     nu-mx auth get-refresh-token --env staging
