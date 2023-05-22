@@ -20,6 +20,8 @@ nu-mx-refresh() {
     nu-mx auth get-refresh-token --env staging
     # nu-mx auth get-access-token --env prod
     # nu-mx auth get-access-token --env staging
+
+    nu ser curl GET global auth /api/version --env prod --country mx
 }
 
 nu-br-refresh() {
@@ -30,6 +32,8 @@ nu-br-refresh() {
     nu-br auth get-refresh-token --env staging
     # nu-br auth get-access-token --env prod
     # nu-br auth get-access-token --env staging
+
+    nu ser curl GET global auth /api/version --env prod --country br
 }
 
 nu-co-refresh() {
@@ -41,6 +45,8 @@ nu-co-refresh() {
     nu-co auth get-refresh-token --env staging
     # nu-co auth get-access-token --env prod
     # nu-co auth get-access-token --env staging
+
+    nu ser curl GET global auth /api/version --env prod --country co
 }
 
 nu-ist-refresh() {
@@ -54,22 +60,42 @@ nu-ist-refresh() {
     # nu-ist auth get-access-token --env staging
 }
 
+nu-incode-refresh() {
+    nu update
+    echo 0 | nu-incode aws credentials refresh --maven-login
+    echo 0 | nu-incode aws credentials refresh
+
+    nu-incode auth get-refresh-token --env prod
+    nu-incode auth get-refresh-token --env staging
+    nu-incode auth get-access-token --env prod
+    nu-incode auth get-access-token --env staging
+}
+
 nu-refresh() {
     nu update
     echo 0 | nu aws credentials refresh
     # echo 0 | nu aws credentials refresh --maven-login
 
-    nu-mx auth get-refresh-token --env prod
-    nu-mx auth get-refresh-token --env staging
+    # nu-mx auth get-refresh-token --env prod
+    # nu-mx auth get-refresh-token --env staging
 
-    nu-co auth get-refresh-token --env prod
-    nu-co auth get-refresh-token --env staging
+    # nu-co auth get-refresh-token --env prod
+    # nu-co auth get-refresh-token --env staging
 
-    nu-br auth get-refresh-token --env prod
-    nu-br auth get-refresh-token --env staging
+    # nu-br auth get-refresh-token --env prod
+    # nu-br auth get-refresh-token --env staging
 
-    nu-ist auth get-refresh-token --env prod
-    nu-ist auth get-refresh-token --env staging
+    # nu-ist auth get-refresh-token --env prod
+    # nu-ist auth get-refresh-token --env staging
+
+
+    # nu-incode auth get-access-token --env prod
+    # nu-incode auth get-access-token --env staging
+
+
+    # nu ser curl GET global auth /api/version --env prod --country mx
+    # nu ser curl GET global auth /api/version --env prod --country br
+    # nu ser curl GET global auth /api/version --env prod --country co
 }
 
 
