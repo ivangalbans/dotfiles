@@ -12,92 +12,51 @@ alias klj='ff(){ clj "$@" -M:klipse;  unset -f ff; }; ff'
 alias g++='g++-11'
 alias cht=/usr/local/bin/cht.sh
 
-nu-mx-refresh() {
-    nu update
-    echo 0 | nu-mx aws credentials refresh --maven-login
+# Nubank
 
-    nu-mx auth get-refresh-token --env prod
-    nu-mx auth get-refresh-token --env staging
-    # nu-mx auth get-access-token --env prod
-    # nu-mx auth get-access-token --env staging
+alias aws-br="nu aws shared-role-credentials refresh --account-alias br --keep-policies=$MY_POLICIES --keep-temporary-policies $MY_TMP_POLICIES"
+alias aws-br-staging="nu aws shared-role-credentials refresh --account-alias br-staging --keep-policies=$MY_POLICIES --keep-temporary-policies $MY_TMP_POLICIES"
+alias aws-br-console="nu aws shared-role-credentials web-console --account-alias br --keep-policies=$MY_POLICIES --keep-temporary-policies $MY_TMP_POLICIES"
 
-    nu ser curl GET global auth /api/version --env prod --country mx
-}
+# Run every day/every hour due to br shared role
 
-nu-br-refresh() {
-    nu update
-    echo 0 | nu-br aws credentials refresh --maven-login
+alias nur='nu update && \
+           nu aws shared-role-credentials refresh --account-alias='br' --keep-policies=$MY_POLICIES --keep-temporary-policies $MY_TMP_POLICIES && \
+           nu aws credentials refresh && \
+           nu codeartifact login maven && \
+           nu codeartifact login npm'
 
-    nu-br auth get-refresh-token --env prod
-    nu-br auth get-refresh-token --env staging
-    # nu-br auth get-access-token --env prod
-    # nu-br auth get-access-token --env staging
+##
+# Run when certificates are expiring or when I want to force a retrieve of the tokens due to scope changes
 
-    nu ser curl GET global auth /api/version --env prod --country br
-}
-
-nu-co-refresh() {
-    nu update
-    # echo 0 | nu-co aws credentials refresh --maven-login
-    echo 0 | nu-co aws credentials refresh
-
-    nu-co auth get-refresh-token --env prod
-    nu-co auth get-refresh-token --env staging
-    # nu-co auth get-access-token --env prod
-    # nu-co auth get-access-token --env staging
-
-    nu ser curl GET global auth /api/version --env prod --country co
-}
-
-nu-ist-refresh() {
-    nu update
-    echo 0 | nu-ist aws credentials refresh --maven-login
-    echo 0 | nu-ist aws credentials refresh
-
-    nu-ist auth get-refresh-token --env prod
-    nu-ist auth get-refresh-token --env staging
-    # nu-ist auth get-access-token --env prod
-    # nu-ist auth get-access-token --env staging
-}
-
-nu-incode-refresh() {
-    nu update
-    echo 0 | nu-incode aws credentials refresh --maven-login
-    echo 0 | nu-incode aws credentials refresh
-
-    nu-incode auth get-refresh-token --env prod
-    nu-incode auth get-refresh-token --env staging
-    nu-incode auth get-access-token --env prod
-    nu-incode auth get-access-token --env staging
-}
-
-nu-refresh() {
-    nu update
-    echo 0 | nu aws credentials refresh
-    # echo 0 | nu aws credentials refresh --maven-login
-
-    # nu-mx auth get-refresh-token --env prod
-    # nu-mx auth get-refresh-token --env staging
-
-    # nu-co auth get-refresh-token --env prod
-    # nu-co auth get-refresh-token --env staging
-
-    # nu-br auth get-refresh-token --env prod
-    # nu-br auth get-refresh-token --env staging
-
-    # nu-ist auth get-refresh-token --env prod
-    # nu-ist auth get-refresh-token --env staging
-
-
-    # nu-incode auth get-access-token --env prod
-    # nu-incode auth get-access-token --env staging
-
-
-    # nu ser curl GET global auth /api/version --env prod --country mx
-    # nu ser curl GET global auth /api/version --env prod --country br
-    # nu ser curl GET global auth /api/version --env prod --country co
-}
-
+alias nur-all='nu update &&
+               nu aws shared-role-credentials refresh --account-alias='br' && \
+               nu codeartifact login maven && \
+               nu aws credentials refresh && \
+               nu-br-staging certs setup --env staging && \
+               nu-br-staging auth get-refresh-token --env staging --force && \
+               nu-br-staging auth get-access-token --env staging && \
+               nu certs setup --env prod && \
+               nu-ist certs setup --env staging && \
+               nu-ist certs setup --env prod && \
+               nu auth get-refresh-token --env prod --force && \
+               nu auth get-access-token --env prod && \
+               nu-ist auth get-refresh-token --env staging --force && \
+               nu-ist auth get-access-token --env staging && \
+               nu-ist auth get-refresh-token --env prod --force && \
+               nu-ist auth get-access-token --env prod && \
+               nu-co auth get-refresh-token --env staging --force && \
+               nu-co auth get-access-token --env staging && \
+               nu-co auth get-refresh-token --env prod --force && \
+               nu-co auth get-access-token --env prod && \
+               nu-mx auth get-refresh-token --env staging --force && \
+               nu-mx auth get-access-token --env staging && \
+               nu-mx auth get-refresh-token --env prod --force && \
+               nu-mx auth get-access-token --env prod && \
+               nu-data auth get-refresh-token --env staging --force && \
+               nu-data auth get-access-token --env staging && \
+               nu-data auth get-refresh-token --env prod --force && \
+               nu-data auth get-access-token --env prod'
 
 cdnu() {
     local proj=$1

@@ -4,7 +4,6 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export NU_COUNTRY="mx"
 eval "$(pyenv init --path)"
 source $HOME/.nurc
 # BEGIN ANSIBLE MANAGED BLOCK - NU_HOME ENV

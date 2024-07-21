@@ -18,10 +18,13 @@ source $HOME/.nu.zsh
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -187,3 +190,15 @@ export PATH="${PATH}:${JAVA_HOME}/bin"
 
 autoload -Uz compinit bashcompinit && compinit && bashcompinit
 source "$NU_HOME/nucli/nu.bashcompletion"
+
+
+# {mark} START IT-ENG JAMF SETUP MOBILE ZSHRC
+export MONOREPO_ROOT="$NU_HOME/mini-meta-repo"
+export PATH="$PATH:$MONOREPO_ROOT/monocli/bin"
+export FLUTTER_SDK_HOME="$HOME/sdk-flutter"
+export FLUTTER_ROOT="$FLUTTER_SDK_HOME"
+export PATH="$PATH:$FLUTTER_SDK_HOME/bin:$NU_HOME/.pub-cache/bin:$FLUTTER_ROOT/bin/cache/dart-sdk/bin"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK="$ANDROID_HOME"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+# {mark} END IT-ENG JAMF SETUP MOBILE ZSHRC
